@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>万圣节抽符</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript">
+			/*function showpage2(){
+				//隐藏page1
+				document.getElementById("page1").style.display="none";
+				//显示page2
+				document.getElementById("page2").style.display="block";
+			}
+			function showpage3(){
+				//隐藏page2
+				document.getElementById("page2").style.display="none";
+				//显示page3
+				document.getElementById("page3").style.display="block";
+			}
+			function showpage4(){
+				//隐藏page3
+				document.getElementById("page3").style.display="none";
+				//显示page4
+				document.getElementById("page4").style.display="block";
+			}*/
+			function showpage(num){
+				document.getElementById("page1").style.display="none";
+				document.getElementById("page2").style.display="none";
+				document.getElementById("page3").style.display="none";
+				document.getElementById("page4").style.display="none";
+				if(num == 2){
+					document.getElementById("page2").style.display="block";
+				}else if(num == 3){
+					document.getElementById("page3").style.display="block";
+				}else if(num == 4){
+					document.getElementById("page4").style.display="block";
+				}
+			}
+			function showcharm(num){
+				//1.page3隐藏
+				//document.getElementById("page3").style.display="none";
+				//2.page4显示
+				//document.getElementById("page4").style.display="block";
+				showpage(4);
+				//3.显示指定的charm
+				if(num == 1){
+					document.getElementById("page4").style.backgroundImage="url(img/charm1.jpg)"
+				}else if(num == 2){
+					document.getElementById("page4").style.backgroundImage="url(img/charm2.jpg)"
+				}else if(num == 3){
+					document.getElementById("page4").style.backgroundImage="url(img/charm3.jpg)"
+				}else if(num == 4){
+					document.getElementById("page4").style.backgroundImage="url(img/charm4.jpg)"
+				}else if(num == 5){
+					document.getElementById("page4").style.backgroundImage="url(img/charm5.jpg)"
+				}else if(num == 6){
+					document.getElementById("page4").style.backgroundImage="url(img/charm6.jpg)"
+				}else if(num == 7){
+					document.getElementById("page4").style.backgroundImage="url(img/charm7.jpg)"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!--helloworld！<br />
+		hellochina！<br />
+		<img src="img/box.png" />
+		<img src="img/title.png" />-->
+		<!--<audio src="audio/AKB48.mp3"   autoplay="autoplay"  ></audio>-->
+		<div id="page1">
+			<img id="title" src="img/title.png" />
+			<img id="box" src="img/box.png" onclick="showpage(2)" />
+			
+		</div>
+		<div id="page2">
+			<img id="pumpkin" src="img/pumpkin.png" />
+			<img id="startGame" src="img/startGame.jpg" onclick="showpage(3)"/>
+		</div>
+		<div id="page3">
+			<img id="charm01" src="img/1.png" onclick="showcharm(1)" />
+			<img id="charm02" src="img/2.png" onclick="showcharm(2)"/>
+			<img id="charm03" src="img/3.png" onclick="showcharm(3)" />
+			<img id="charm04" src="img/4.png" onclick="showcharm(4)" />
+			<img id="charm05" src="img/5.png" onclick="showcharm(5)" />
+			<img id="charm06" src="img/6.png" onclick="showcharm(6)" />
+			<img id="charm07" src="img/7.png" onclick="showcharm(7)" />
+		</div>
+		<div id="page4">
+			<img src="img/back.png" onclick="showpage(3)" />
+		</div>
+	</body>
+</html>
