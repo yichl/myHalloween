@@ -35,7 +35,7 @@ div{
 #page4{
 	background-image: url(../img/charm5.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	display: none;
 }
 #title{
